@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Week 2</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Exercise 1</h1>
+    
+    <!-- Tervehditään, jos vierailija on vähintään 18v. -->   
+    <div th:if="${age} &gt; 17">
+	    <p th:text="'Welcome ' + ${name} + '!'" />
+    </div>
+    
+    <!--  Alle 18-vuotiaiden ilmoitetaan olevan liian nuoria -->
+    <div th:if="${age} &lt; 18">
+    	<p th:text="'You are too young!'" />
+    </div>
+    
+</body>
+</html>
